@@ -1,0 +1,69 @@
+model:
+  arch: common_Qformer_lead_difference_RWKV_2o_3f
+  model_type: pretrain_vicuna
+  # OPT
+  opt_model: "/home/newdisk/yutao/model/facebook-opt-2.7b"
+  # opt project
+  frozen_opt_proj: False
+  num_video_query_token: 32
+  max_frame_pos: 32
+  q_former_hidden_size: 4096
+  max_txt_len: 30
+  end_sym: "\n"
+  device: "cuda"
+  NCT_config:
+    #input_dim: 2052
+    feat_dim: 768
+    #emb_dim: 512
+    att_dim: 768
+    att_head: 8
+    att_layer: 1
+    #dim: 128
+
+
+datasets:
+  gebc_builder_Qformer_RWKV_2optimizer_3feature:
+    data_type: video
+    build_info:
+      video_info_path: /home/newdisk/yutao/my_data/kinetics_GEBC/labels/video_info.json
+      q_former_feature_folder: /home/newdisk/yutao/my_data/kinetics_GEBC/features/eva_vit_g_q_former_tokens_12_opt2.7b
+      max_seq_len: 96
+      annotations:
+        train:
+          #annotation_path: /home/newdisk/yutao/my_data/kinetics_GEBC/labels/train_all_annotation.json
+          annotation_path: /home/newdisk/yutao/my_data/kinetics_GEBC/labels/trainset_highest_f1.json
+        val:
+          annotation_path: /home/newdisk/yutao/my_data/kinetics_GEBC/labels/valset_highest_f1.json
+        test:
+          annotation_path: /home/newdisk/yutao/my_data/kinetics_GEBC/labels/test.json
+
+run:
+  task: boundary_captioning_Qformer_and_RWKV
+  # optimizer
+  lr_sched: "linear_warmup_cosine_lr"
+  #init_lr: 1e-5
+  #min_lr: 5e-6
+  #warmup_lr: 1e-6
+  #weight_decay: 0.001
+  max_epoch: 10
+  batch_size_train: 12
+  batch_size_eval: 12
+  num_workers: 4
+  warmup_steps: 1000
+  seed: 42
+  output_dir: "output/video_blip2_opt_highest_f1_12frame"
+  amp: True
+  resume_ckpt_path: null
+  evaluate: False
+  train_splits: ["train"]
+  valid_splits: ["val"]
+  test_splits: ["test"]
+  device: "cuda"
+  #gpu: 1
+  world_size: 1
+  dist_url: "env://"
+  distributed: False
+  num_beams: 2
+  max_len: 30
+  min_len: 1
+  runner: "runner_Qformer_and_RWKV"
