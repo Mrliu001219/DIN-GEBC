@@ -81,25 +81,5 @@ CUDA_VISIBLE_DEVICES=${YOUR_GPU_ID} python train.py \
 ```
 The results can be found in `video_llama/output/`.
 
-## Acknowledgement
-We are grateful for the following awesome projects our LLMVA-GEBC arising from:
-* [Context-GEBC](https://github.com/zjr2000/Context-GEBC)
-* [BLIP-2](https://github.com/salesforce/LAVIS/tree/main/projects/blip2)
-* [Video-LLaMA](https://github.com/DAMO-NLP-SG/Video-LLaMA)
-* [OPT](https://github.com/facebookresearch/metaseq)
-* [Kinetic-GEBC](https://github.com/showlab/geb-plus)
 
-
-## Citation
-If you find our code useful, please cite the repo as follows:
-```
-@misc{tang2023llmvagebc,
-      title={LLMVA-GEBC: Large Language Model with Video Adapter for Generic Event Boundary Captioning}, 
-      author={Yunlong Tang and Jinrui Zhang and Xiangchen Wang and Teng Wang and Feng Zheng},
-      year={2023},
-      eprint={2306.10354},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-}
-```
 
