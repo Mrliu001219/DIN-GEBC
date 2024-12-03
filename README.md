@@ -14,7 +14,7 @@ Experimental results demonstrate that our model outperforms existing models, eve
 
 
 <p align="center" width="100%">
-<a target="_blank"><img src="figs/overall.pdf" alt="LLMVA-GEBC" style="width: 80%; min-width: 200px; display: block; margin: auto;"></a>
+<a target="_blank"><img src="figs/overall.png" alt="LLMVA-GEBC" style="width: 80%; min-width: 200px; display: block; margin: auto;"></a>
 </p>
 
 ### Enviroment Preparation 
