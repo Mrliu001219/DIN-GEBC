@@ -30,7 +30,7 @@ conda activate DIN-GEBC
 
 Before using the repository, make sure you have obtained the following checkpoints:
 - [vit-g](https://huggingface.co/lainxx/eva_vit_g)
-- [pretrained BLIP2]
+- [pretrained BLIP2](https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_opt2.7b.pth)
 - [facebook/opt-2.7b](https://huggingface.co/facebook/opt-2.7b)
   
 
