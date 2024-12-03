@@ -29,8 +29,7 @@ conda activate DIN-GEBC
 ## Prerequisite Checkpoints
 
 Before using the repository, make sure you have obtained the following checkpoints:
-- [pretrain-vicuna13b](https://huggingface.co/DAMO-NLP-SG/Video-LLaMA-Series/resolve/main/pretrain-vicuna13b.pth)
-- [facebook/opt-13b](https://huggingface.co/facebook/opt-13b)
+- [facebook/opt-2.7b](https://huggingface.co/facebook/opt-2.7b)
 
 Remember to change the path of checkpoints `ckpt` in the config file.
 
