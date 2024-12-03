@@ -29,7 +29,9 @@ conda activate DIN-GEBC
 ## Prerequisite Checkpoints
 
 Before using the repository, make sure you have obtained the following checkpoints:
+- [pretrained BLIP2]
 - [facebook/opt-2.7b](https://huggingface.co/facebook/opt-2.7b)
+  
 
 Remember to change the path of checkpoints `ckpt` in the config file.
 
