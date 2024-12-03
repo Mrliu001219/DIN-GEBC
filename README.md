@@ -29,7 +29,7 @@ conda activate DIN-GEBC
 ## Prerequisite Checkpoints
 
 Before using the repository, make sure you have obtained the following checkpoints:
-- [vit-g]
+- [vit-g](https://huggingface.co/lainxx/eva_vit_g)
 - [pretrained BLIP2]
 - [facebook/opt-2.7b](https://huggingface.co/facebook/opt-2.7b)
   
