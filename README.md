@@ -22,7 +22,7 @@ Experimental results demonstrate that our model outperforms existing models, eve
 First, you should create a conda environment:
 ```
 conda env create -f environment.yml
-conda activate llmvagebc
+conda activate DIN-GEBC
 ```
 
 
