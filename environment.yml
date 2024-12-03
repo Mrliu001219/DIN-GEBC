@@ -1,4 +1,4 @@
-name: /home/newdisk/yutao/conda_env/llmva-gebc-rwkv5
+name: DIN-GEBC
 channels:
   - http://mirrors.aliyun.com/anaconda/cloud/conda-forge
   - defaults
@@ -268,4 +268,4 @@ dependencies:
       - websockets==11.0.3
       - yarl==1.8.2
       - zipp==3.14.0
-prefix: /home/newdisk/yutao/conda_env/llmva-gebc-rwkv5
+
