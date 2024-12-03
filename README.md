@@ -44,32 +44,11 @@ Using [BLIP-2](https://github.com/salesforce/LAVIS/tree/main/projects/blip2) to 
 ```
 python feature_extraction.py --cfg-path train_configs/blip2_feature_extract.yaml
 ```
-
-**For other visual features:**
-[CLIP](https://github.com/openai/CLIP) to extract frame-level features and [Omnivore](https://github.com/facebookresearch/omnivore) to extract clip-level features. We use [this](https://github.com/zjr2000/Untrimmed-Video-Feature-Extractor) pipeline to extract features.
-
 Then, put the extracted features under these three folders:
 ```
 data/features/eva_vit_g_q_former_tokens_12
-data/features/clip_fps_15_stride_1_rename,
-data/features/omnivore_fps_15_len_16_stride_1_rename
-``` 
-
-You can also directly download the official provided features [here](https://sites.google.com/view/loveucvpr22/home). But, remember to change the ```q_former_feature_folder```, ```other_feat_total_size```, ```other_feature_names``` and ```other_feature_folders``` in the config file.
-
-
-Using [VinVL](https://github.com/microsoft/scene_graph_benchmark) to extract region-level features. The region feature of a video is saved to multiple ```.npy``` files, where each single file contains the region feature of a sampled frame. Merge the feature file paths into  ```video_to_frame_index.json``` in the following format:
 ```
-{
-    "video_id": [
-        "frame_1_feat.npy",
-        "frame_2_feat.npy",
-        ...     
-    ],
-    ...
-}
-``` 
-Then put this file under ```data/features/```.
+
 
 
 ## Training and Validation
